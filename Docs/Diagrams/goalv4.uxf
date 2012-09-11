@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>12</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>480</x>
+      <y>660</y>
+      <w>252</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>_Player_
+--
+-weight:double
+-height:double
+-birthDate:DateTime
+-facebookAccount:Email
+-thumbnail:ByteArray
+-totalCupsPlayed:int
+-gender:int
+-shirtSize:int
+-shoeSize:int
+-bio:String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>852</x>
+      <y>696</y>
+      <w>252</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>_AvailableSchedule_
+--
+-dayOfWeek:int
+-startTime:DateTime
+-endTime:DateTime
+-repeat:bool
+-court:Court</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>696</x>
+      <y>672</y>
+      <w>180</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+availableAt</panel_attributes>
+    <additional_attributes>156;60;36;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>852</x>
+      <y>876</y>
+      <w>144</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Position
+--
+-name:String
+[Goalkeeper, Back Defender, Midfielder, Forward]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>696</x>
+      <y>840</y>
+      <w>180</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+positions</panel_attributes>
+    <additional_attributes>156;60;36;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>660</x>
+      <y>864</y>
+      <w>216</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+favorite</panel_attributes>
+    <additional_attributes>192;84;72;84;72;36</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>480</x>
+      <y>972</y>
+      <w>180</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Contact
+--
+-name:String
+-isACompany:bool
+-mobile:String
+-phone:String
+-email:String
+-address:String
+-favorite:int
+-docType:int
+-docNumber:String
+-nationality:int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>492</x>
+      <y>864</y>
+      <w>60</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>36;108;36;36</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>540</x>
+      <y>864</y>
+      <w>142</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+reference</panel_attributes>
+    <additional_attributes>72;108;72;36</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>216</x>
+      <y>504</y>
+      <w>204</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Cup
+--
+-name:String
+-started:DateTime
+-ended:DateTime</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>132</x>
+      <y>660</y>
+      <w>288</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>PlayerStats
+--
+-totalPlayedGames:int
+-playingAsSubstitutePlayer:int
+-playingAsMainPlayer:int
+-totalPlayTime_Minutes:int
+-redCards:int
+-yellowCards:int
+-score:int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>480</x>
+      <y>468</y>
+      <w>144</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Team
+--
+-name:String
+-thumbnail
+-bio:String
+-coach:Contact
+-captain:Player</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>420</x>
+      <y>576</y>
+      <w>154</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+homeTeam</panel_attributes>
+    <additional_attributes>84;36;84;84</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>384</x>
+      <y>696</y>
+      <w>120</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+player</panel_attributes>
+    <additional_attributes>96;60;36;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>312</x>
+      <y>564</y>
+      <w>106</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+cups</panel_attributes>
+    <additional_attributes>60;36;60;96</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>384</x>
+      <y>432</y>
+      <w>120</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*</panel_attributes>
+    <additional_attributes>96;84;36;36</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>156</x>
+      <y>204</y>
+      <w>264</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>Match
+--
+-scheduledAt:DateTime
+-round:int
+-referee:Contact
+-scoreForA:int
+-scoreForB:int
+-goalsForA:Goal
+-goalsForB:Goal
+-redCardsForA:RedCard
+-yellowCardsForA:Yellowcard
+-redCardsForB:RedCard
+-yellowCardsForB:Yellowcard</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>384</x>
+      <y>336</y>
+      <w>252</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+teamA</panel_attributes>
+    <additional_attributes>204;132;204;60;36;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>384</x>
+      <y>360</y>
+      <w>226</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+teamB</panel_attributes>
+    <additional_attributes>168;108;168;60;36;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>300</x>
+      <y>432</y>
+      <w>134</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+matches</panel_attributes>
+    <additional_attributes>72;36;72;72</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>612</x>
+      <y>288</y>
+      <w>156</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>MatchEvent
+--
+-minute:int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>624</x>
+      <y>336</y>
+      <w>116</w>
+      <h>348</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+player</panel_attributes>
+    <additional_attributes>60;324;60;36</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>828</x>
+      <y>228</y>
+      <w>168</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Goal
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>828</x>
+      <y>312</y>
+      <w>168</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>RedCard
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>828</x>
+      <y>396</y>
+      <w>168</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>YellowCard
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>732</x>
+      <y>312</y>
+      <w>120</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>36;36;96;36</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>768</x>
+      <y>216</y>
+      <w>84</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>60;36;36;36;36;216;60;216</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>492</x>
+      <y>0</y>
+      <w>252</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>Court
+--
+-gameType:GameTypeEnum[futbol-sala,micro,fultbol5]
+-width:int
+-length:int
+-courtType:CourtTypeEnum[grass,synthetic,wooden,sand]
+-contact:Contact
+-address:String
+-city:String
+-country:String
+-name:String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>324</x>
+      <y>72</y>
+      <w>192</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+court</panel_attributes>
+    <additional_attributes>168;60;60;60;60;132</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>528</x>
+      <y>576</y>
+      <w>124</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+players</panel_attributes>
+    <additional_attributes>72;84;72;36</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>384</x>
+      <y>480</y>
+      <w>120</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+1st</panel_attributes>
+    <additional_attributes>96;60;36;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>384</x>
+      <y>492</y>
+      <w>120</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+2nd</panel_attributes>
+    <additional_attributes>96;60;36;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>384</x>
+      <y>504</y>
+      <w>120</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+3rd</panel_attributes>
+    <additional_attributes>96;60;36;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>384</x>
+      <y>516</y>
+      <w>120</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+4th</panel_attributes>
+    <additional_attributes>96;60;36;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1020</x>
+      <y>168</y>
+      <w>168</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Timeslots
+--
+-dayOfWeek:int
+-openingHour:int
+-closingHour:int
+-price:double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>708</x>
+      <y>24</y>
+      <w>432</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+availableTimes</panel_attributes>
+    <additional_attributes>348;144;348;60;36;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>984</x>
+      <y>468</y>
+      <w>204</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>RSVP
+--
+-court:Court
+-team:Team
+-starts:DateTime
+-ends:DateTime
+-reservedBy:Player
+-teamA:Team
+-teamB:Team
+-isPublic:bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>852</x>
+      <y>528</y>
+      <w>156</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+guests
+m1=  *</panel_attributes>
+    <additional_attributes>36;60;132;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>732</x>
+      <y>552</y>
+      <w>156</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Guest
+--
+-rsvp-ed:RSVPEnum[confirmed,rejected,pending]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>672</x>
+      <y>576</y>
+      <w>116</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+player</panel_attributes>
+    <additional_attributes>60;84;60;36</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1056</x>
+      <y>252</y>
+      <w>60</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>36;36;36;216</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>732</x>
+      <y>1056</y>
+      <w>216</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-username:String
+-password:String
+-lockedOut:bool
+-lastLoginDate:DateTime
+-failedLogonAttempts:int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1032</x>
+      <y>1056</y>
+      <w>120</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Role
+--
+-roleName</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>912</x>
+      <y>1032</y>
+      <w>144</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+roles
+m1=*</panel_attributes>
+    <additional_attributes>120;60;36;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>624</x>
+      <y>1056</y>
+      <w>132</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>36;36;108;36</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>252</x>
+      <y>1056</y>
+      <w>132</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>CourtManager
+--
+-couts:Court[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>348</x>
+      <y>1044</y>
+      <w>156</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>132;36;36;36</additional_attributes>
+  </element>
+</diagram>

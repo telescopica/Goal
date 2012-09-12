@@ -1,0 +1,4 @@
+1. Install aptana Studio
+2. Go to Aptana Preferences > Pydev > Interpreter-python
+3. Click "new". Manually pick a python interpreter. On OSX, choose /usr/bin/python. Click OK
+4. Apatana will attempt to autoconfigure all needed libraries. Make sure django libraries are made available. On OSX these should be at '/Library/Python/2.x/site-packages'

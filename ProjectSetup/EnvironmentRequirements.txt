@@ -1,0 +1,4 @@
+1. XCode
+2. Xcode command line tools
+3. MySQL x64
+4. Python 2.7

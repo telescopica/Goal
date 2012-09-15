@@ -30,6 +30,10 @@ echo "installing PIL"
 sudo pip install PIL;
 echo "installing MySQL-python" 
 sudo pip install MySQL-python;
+echo "installing django social auth"
+sudo pip install django-social-auth
+echo "updating"
+sudo pip sudo pip install --upgrade django-social-auth
 echo "adding MySQL-python to path"
 sudo echo "export DLYD_LIBRARY_PATH=/usr/local/mysql/lib" >> /etc/profile;
 sudo ln -s /usr/local/mysql/lib/libmysqlclient.18.dylib /usr/local/lib/libmysqlclient.18.dylib;

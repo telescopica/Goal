@@ -108,7 +108,33 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    '/Users/Thor/Documents/Goal/Goal_Site/Goal_Site/templates/',
 )
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    #...
+    "django.core.context_processors.request",
+    #...
+    "allauth.account.context_processors.account",
+    "allauth.socialaccount.context_processors.socialaccount"
+)
+
+
+AUTHENTICATION_BACKENDS = (
+    "allauth.account.auth_backends.AuthenticationBackend", 
+)
+
+ACCOUNT_AUTHENTICATION_METHOD = "email"
+
+ACCOUNT_EMAIL_REQUIRED = True
+
+SOCIALACCOUNT_QUERY_EMAIL = ACCOUNT_EMAIL_REQUIRED
+
+SOCIALACCOUNT_PROVIDERS = { 'facebook': { 'SCOPE': ['email', 'publish_stream'],
+                                         'METHOD': 'oauth2' ,
+                                         'LOCALE_FUNC': lambda request: 'es_CO'},
+                           'google': { 'SCOPE': ['https://www.googleapis.com/auth/userinfo.profile'] } }
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -121,6 +147,16 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.linkedin',
+    'allauth.socialaccount.providers.openid',
+    'allauth.socialaccount.providers.soundcloud',
+    'allauth.socialaccount.providers.twitter'
 )
 
 # A sample logging configuration. The only tangible logging
